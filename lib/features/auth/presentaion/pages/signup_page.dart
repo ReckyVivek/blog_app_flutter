@@ -19,10 +19,10 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  final formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final nameController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
@@ -40,12 +40,12 @@ class _SignUpPageState extends State<SignUpPage> {
         padding: const EdgeInsets.all(15.0),
         child: BlocConsumer<AuthBloc, AuthState>(
           listener: (context, state) {
-            if(state is AuthFailure){
+            if (state is AuthFailure) {
               showSnackBar(context, state.message);
-            } 
+            }
           },
           builder: (context, state) {
-            if(state is AuthLoading){
+            if (state is AuthLoading) {
               return const Loader();
             }
             return Form(

@@ -28,7 +28,7 @@ class AuthRemoteDataSourceImple implements AuthRemoteDataSource {
         password: password,
         email: email,
       );
-      if(response.user == null){
+      if (response.user == null) {
         throw const ServerException('User is null!');
       }
       return UserModel.fromJson(response.user!.toJson());
@@ -50,18 +50,14 @@ class AuthRemoteDataSourceImple implements AuthRemoteDataSource {
         data: {
           'name': name,
         },
-        
       );
-      
-      if(response.user == null){
+
+      if (response.user == null) {
         throw const ServerException('User is null!');
       }
-      print(UserModel.fromJson(response.user!.toJson()));
       return UserModel.fromJson(response.user!.toJson());
     } catch (e) {
       throw ServerException(e.toString());
     }
   }
 }
-
-
