@@ -1,0 +1,5 @@
+class AppSecrets{
+static const supabaseUrl = 'https://cwgwmzyzmjdskfiixtod.supabase.co';
+static const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN3Z3dtenl6bWpkc2tmaWl4dG9kIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjA2ODc0NzQsImV4cCI6MjAzNjI2MzQ3NH0.P-758q_JzKRXtRgZCbio9kHxgcda49iagLHhUfGNwpk';
+
+}
