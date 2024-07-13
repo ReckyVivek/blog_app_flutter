@@ -1,4 +1,3 @@
-
 class User {
   final String id;
   final String email;
@@ -8,6 +7,4 @@ class User {
     required this.email,
     required this.name,
   });
-
-  
 }

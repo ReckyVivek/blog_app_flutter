@@ -37,12 +37,12 @@ class _LoginPageState extends State<LoginPage> {
         padding: const EdgeInsets.all(15.0),
         child: BlocConsumer<AuthBloc, AuthState>(
           listener: (context, state) {
-            if(state is AuthFailure){
+            if (state is AuthFailure) {
               showSnackBar(context, state.message);
-            } 
+            }
           },
           builder: (context, state) {
-            if(state is AuthLoading){
+            if (state is AuthLoading) {
               return const Loader();
             }
             return Form(
