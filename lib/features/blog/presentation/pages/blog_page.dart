@@ -9,7 +9,8 @@ class BlogPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('Blog App')),
+        title: const Text('Blog App'),
+        centerTitle: true,
         actions: [
           IconButton(
             onPressed: () {
