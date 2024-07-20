@@ -1,5 +1,7 @@
 import 'package:blog_app/core/error/exceptions.dart';
 import 'package:blog_app/features/auth/data/model/user_model.dart';
+import 'package:fpdart/fpdart.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 abstract interface class AuthRemoteDataSource {
@@ -39,6 +41,8 @@ class AuthRemoteDataSourceImple implements AuthRemoteDataSource {
       }
       return UserModel.fromJson(response.user!.toJson())
           .copyWith(email: currentUserSession!.user.email);
+    } on AuthException catch (e) {
+      throw ServerException(e.message);
     } catch (e) {
       throw ServerException(e.toString());
     }
@@ -65,6 +69,8 @@ class AuthRemoteDataSourceImple implements AuthRemoteDataSource {
       return UserModel.fromJson(response.user!.toJson()).copyWith(
         email: currentUserSession!.user.email,
       );
+    } on AuthException catch (e) {
+      throw ServerException(e.message);
     } catch (e) {
       throw ServerException(e.toString());
     }
