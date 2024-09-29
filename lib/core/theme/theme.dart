@@ -12,7 +12,7 @@ class AppTheme {
     scaffoldBackgroundColor: AppPallete.backgroundColor,
     appBarTheme: const AppBarTheme(backgroundColor: AppPallete.backgroundColor),
     chipTheme: const ChipThemeData(
-      color: MaterialStatePropertyAll(
+      color: WidgetStatePropertyAll(
         AppPallete.backgroundColor,
       ),
       side: BorderSide.none,
